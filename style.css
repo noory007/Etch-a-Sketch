@@ -44,11 +44,6 @@ body {
   box-sizing: border-box;
 }
 
-/* ========================= */
-/* 📱 Responsive Media Queries */
-/* ========================= */
-
-/* Medium screens (tablets) */
 @media (max-width: 768px) {
   .header,
   .footer {
@@ -65,7 +60,6 @@ body {
   }
 }
 
-/* Small screens (phones) */
 @media (max-width: 480px) {
   .header,
   .footer {
