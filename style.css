@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   font-family: sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 20px 16px; /* ⬅️ horizontal padding added */
   box-sizing: border-box;
 }
 
@@ -14,7 +14,7 @@ body {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  max-width: 380px;
+  max-width: 360px; /* ⬅️ slightly reduced */
   justify-content: space-around;
   margin-bottom: 20px;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 360px; /* ⬅️ slightly reduced */
   margin-top: 20px;
   flex-wrap: wrap;
   text-align: center;
@@ -36,13 +36,19 @@ body {
 
 .board {
   width: 100%;
-  max-width: 400px;
+  max-width: 360px; /* ⬅️ slightly reduced */
   aspect-ratio: 1 / 1;
   display: grid;
   border: 1px solid black;
   margin: 10px 0;
+  box-sizing: border-box;
 }
 
+/* ========================= */
+/* 📱 Responsive Media Queries */
+/* ========================= */
+
+/* Medium screens (tablets) */
 @media (max-width: 768px) {
   .header,
   .footer {
@@ -59,6 +65,7 @@ body {
   }
 }
 
+/* Small screens (phones) */
 @media (max-width: 480px) {
   .header,
   .footer {
