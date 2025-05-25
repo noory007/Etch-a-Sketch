@@ -1,32 +1,90 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 400px;
-    justify-content: space-around;
-    margin-bottom: 20px;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.footer{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 500px;
-    align-items: center;
-    margin-top: 20px;
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 10px;
 }
 
-.board{
-    width: 500px;
-    height: 500px;
-    display: grid;
-    border: 1px solid black;
+.board {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  border: 1px solid black;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .header,
+  .footer {
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .board {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header,
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .board {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  #message,
+  #draw {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
